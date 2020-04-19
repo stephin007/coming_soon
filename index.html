@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/fontawesome.min.js">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <title>Chitrahaar</title>
+</head>
+<body>
+    
+    <header>
+        
+
+        <div class="content">
+
+            <h1>COMING SOON!</h1>
+            <h2>I see everyone with camera these days but not everyone has passion.</h2>
+        </div>
+
+        <hr>
+
+        <p id="launch"></p>
+            
+    </header>
+
+    <footer>
+        <div class="social">
+            <ul>
+                <li class="link1">
+                    <a href="https://m.facebook.com/photographybyketan-2233357636702158/" target="_blank">
+        
+                        <i class="fa fa-facebook"></i>
+        
+                    </a>
+                </li>
+                
+                <li class="link2">
+                    <a href="https://instagram.com/photography.by.ketan?igshid=1x13ykgbcgu8v" target="_blank">
+                
+                        <i class="fa fa-instagram"></i>
+                
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </footer>    
+    
+</body>
+
+    <script>
+
+        var countDownDate = new Date("Apr 20, 2020 00:00:00").getTime();
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("launch").innerHTML = days + "d" + hours + "h" + minutes + "m" + seconds + "s";
+
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("launch").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+
+    </script>
+
+</html>
